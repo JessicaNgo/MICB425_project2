@@ -247,6 +247,6 @@ ggplot(aes(x = NO3_uM, y = Depth_m)) +
 ```
 
 Finally we use `cowplot` to create a composite figure. We can add panel labels (A, B) and change the relative widths of the plots. We will make the methane plot much skinnier than the abundance plot.
-```{r}
+```{r fig.width=10, fig.height=4}
 plot_grid(plot3, plot2, plot1, labels=c("A", "B", "C"), axis="l", nrow=1, ncol=3, rel_widths=c(1/4, 1/4, 1))
 ```
