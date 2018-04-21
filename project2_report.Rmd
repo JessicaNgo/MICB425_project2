@@ -11,15 +11,21 @@ output:
       collapsed: no
 ---
 
-####Abstract
+####Abstract  
 
-####Introduction
+####Introduction  
 
-####Methods
+Oxygen minimum zones (OMZs) are regions in the ocean where dissolved oxygen concentrations fall below 20 $\mu$M (1). Because of temperature increases and other effects caused by global warming, OMZs are rising at a notable rate. Saanich Inlet is a seasonally anoxic fjord off the coast of British Columbia and a model ecosystem for studying the diversity and biochemical responses of microbial communities to the hypoxic environments commonly observed in OMZs (1, 2). In particular, Saanich Inlet has been used to model the metabolic coupling and symbiotic interactions that occur in OMZs(3).  The inlet undergoes recurring cycles of water column stratification and deep water renewal, making it a model ecosystem for studying microbial responses to changes in oceanic oxygenation levels (4). Increased levels of primary productivity in ocean surfaces during the spring season, along with the limited mixing which occurs between the basin and surface waters both result in the development of an anoxic body of water with increasing depth in the Inlet (2). These anoxic regions become highly populated with chemolithoautotrophs, eventually leading to a decrease in aerobically respiring organisms found deeper within these zones. Past studies have shown that these types of metabolic shifts usually lead to a loss of nitrogen along with the production of notable greenhouse gases such as methane (CH~4~) and nitrous oxide (N~2~O) (1). In addition, some species have been shown to engage in sulfide (H~2~S) oxidation and nitrate (NO~3~^-^) reduction pathways within these zones (5). Nitrate reduction is a part of the nitrogen cycle, which is an important nutrient biogeochemical cycle that mainly consists of nitrogen fixation, nitrification and denitrification. Microorganisms play a very large role in the nitrogen cycle and, therefore, in the concentrations of these nutrients in our atmosphere (5).  
 
-####Results
+The aim of our project was to characterize the involvement of our gene of interest, narG, which is known for its role in the reduction of NO~3~^-^ to NO~2~^-^ in the denitrification cycle. Previous data has shown that (insert certain depths) exhibits traits of high narG activity: having low concentrations of (insert certain chemical) and (insert certain chemical), as seen in (insert figures) (adapted from certain paper). In this project, the analyzed data shows that at (insert a certain depth), there is high concentrations of (insert chemicals) and low concentrations of (certain chemicals), which is concurrent with the previous study. This is relevant because (insert certain reason). Recent literature has highlighted that microbial taxa do not necessarily integrate whole elemental cycles into their individual metabolic pathways, but often divide these reactions among the community so that consortia of taxa must rely on each other to fulfill their metabolic requirements (2).  
 
-#####Environment setup and Data Cleaning
+
+
+####Methods  
+
+####Results  
+
+#####Environment setup and Data Cleaning  
 ```{r echo=FALSE}
 library(tidyverse)
 library(cowplot)
@@ -319,4 +325,10 @@ C) Nitrite (NO2) concentration across depth     D) Nitrate (NO3) concentration a
 
 ####Discussion
 
-####References
+####References  
+
+1. Walsh DA, Zaikova E, Howes CG, Song YC, Wright JJ, Tringe SG, Hallam SJ. 2009. Metagenome of a versatile chemolithoautotroph from expanding oceanic dead zones. Science 326(5952): 578-582.  
+2. Torres-Beltrán M, Hawley AK, Capelle D, Zaikova E, Walsh DA., Mueller A, Finke J. 2017. A compendium of geochemical information from the Saanich Inlet water column. Nature scientific data 4(170159).  
+3. Hawley AK, Torres-Beltrán M, Zaikova E, Walsh DA, Mueller A, Scofield M, Kheirandish S, Payne C, Pakhomova L, Bhatia M, Shevchek O, Gies EA, Fairley D, Malfatii SA, Norbeck AD, Brewer HM, Pasa-Tolic, L, del Rio TG, Suttle CA, Trige S, Hallam SJ. Data Descriptor: A compendium of multi-omic sequence information from the Saanich Inlet water column. Nature scientific data 4(170160).  
+4. Hallam SJ, Torres-Beltrán M, Hawley AK. Comment: Monitoring microbial responses to ocean deoxygenation in a model oxygen minimum zone. Nature scientific data 4(170158).  
+5. National Research Council. 2007. The new science of metagenomics: revealing the secrets of our microbial planet. National Academies Press, Washington, DC.  
