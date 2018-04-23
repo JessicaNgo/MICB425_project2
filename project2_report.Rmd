@@ -229,23 +229,6 @@ ggplot(aes(x = Phylum, y = Depth_m)) +
  
 ```
 
-Alternative representation with faceted data
-```{r fig.width=10, echo=FALSE}
-narG.all %>% 
-# Change NAs to "unclassified" at the level you want to plot
-  mutate(Genus = ifelse(is.na(Phylum), "unclassified Bacteria", Phylum)) %>% 
-  
-ggplot(aes(x = Genus, y = Depth_m, las=2)) +
-  geom_point(aes(size = ifelse(Abundance == 0, NA, Abundance))) +
-  scale_y_reverse(lim=c(200,0)) +
-  labs(y="Depth (m)")+
-  facet_wrap(~Type) +
-  theme_classic() +
-  scale_size_continuous(name = "Abundance") + 
-  theme(axis.text.x = element_text(angle = 45, hjust =1))+
-  labs(caption = "Figure 3. Abundance of phyla with narG (DNA vs. RNA) at different depths") +
-  theme(plot.caption = element_text(hjust=0.5, size=rel(1.3)))
-```
 
 ##### 4. How does the abundance of narG gene relate to nitrogen species in Saanich?
 
@@ -325,6 +308,23 @@ C) Nitrite (NO2) concentration across depth     D) Nitrate (NO3) concentration a
 ```
 
 ####Discussion
+
+```{r fig.width=5, fig.height=5}
+# Oxygen with depth
+metadata %>% 
+# Order the data by depth  
+  arrange(Depth_m) %>% 
+  
+ggplot(aes(x = O2_uM, y = Depth_m)) +
+    geom_point() +
+    geom_path(aes(group = 1)) +
+    scale_y_reverse(lim=c(200,0)) +
+  theme_classic() +
+  labs(y = "Depth (m)",
+       x = "O2 (uM)")+
+  labs(caption="Figure 5. Oxygen in Saanich across depth")+
+  theme(plot.caption = element_text(hjust=0.5,size=rel(1.0)))
+```
 
 ####References  
 
